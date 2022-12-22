@@ -73,7 +73,9 @@ def register():
                         "cognome": request.form['cognome'],
                         "nome": request.form['nome'],
                         "cf": request.form['cf'],                    
-                        "isMensa": "false",       
+                        "isMensa": "false",
+                        "isAdmin": "false",
+
                     })
                     return redirect(url_for('index'))
     return render_template('register.html')
