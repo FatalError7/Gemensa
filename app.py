@@ -55,22 +55,27 @@ def register():
         username = request.form['username']
         signin_user = user.find_one({"username": username})
         if signin_user:
-            return "Utente già esiste"
+            return render_template('register.html', error=1)
         else:
-            if request.form['password'] != request.form['passwordc']:
-                return "Le password non coincidono"
-            else:
-                hashed = bcrypt.hashpw(request.form['password'].encode('utf-8'), bcrypt.gensalt())
-                user.insert_one({
-                    "_id": uuid.uuid4().hex,
-                    "username": request.form['username'],
-                    "password": hashed,                    
-                    "cognome": request.form['cognome'],
-                    "nome": request.form['nome'],
-                    "cf": request.form['cf'],                    
-                    "isMensa": "false",       
-                })
-                return redirect(url_for('index'))
+            cf = request.form['cf']
+            signin_cf = user.find_one({"cf": cf})
+            if signin_cf:
+                return render_template('register.html', error=2)
+            else:          
+                if request.form['password'] != request.form['passwordc']:
+                    return render_template('register.html', error=3)
+                else:
+                    hashed = bcrypt.hashpw(request.form['password'].encode('utf-8'), bcrypt.gensalt())
+                    user.insert_one({
+                        "_id": uuid.uuid4().hex,
+                        "username": request.form['username'],
+                        "password": hashed,                    
+                        "cognome": request.form['cognome'],
+                        "nome": request.form['nome'],
+                        "cf": request.form['cf'],                    
+                        "isMensa": "false",       
+                    })
+                    return redirect(url_for('index'))
     return render_template('register.html')
 
 

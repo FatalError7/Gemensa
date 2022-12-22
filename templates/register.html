@@ -56,16 +56,6 @@
 
                     <form method="POST">
                         <div class="row d-flex align-items-center justify-content-center">
-                            <!-- <div class="col ">
-                                <div class="mb-4">
-                                    <label for="grado" class="form-label">Grado</label>
-                                    <select class="form-select rounded-8 shadow-3" required
-                                        aria-label="Default select example" name="grado" required>
-                                        <option value=''>Seleziona il grado</option>
-                                        
-                                    </select>
-                                </div>
-                            </div> -->
                             <div class="col">
                                 <div class="mb-4">
                                     <label for="text" class="form-label">Cognome</label>
@@ -83,16 +73,6 @@
                         </div>
 
                         <div class="row d-flex align-items-center justify-content-center">
-                            <!-- <div class="col-8">
-                                <div class="mb-4">
-                                    <label for="appartenenza" class="form-label">Appartenenza</label>
-                                    <select class="form-select rounded-8 shadow-3" required
-                                        aria-label="Default select example" name="appartenenza">
-                                        <option value=''>Seleziona il Reggimento-Compagnia d'appartenenza</option>
-                                        
-                                    </select>
-                                </div>
-                            </div> -->
                             <div class="col">
                                 <div class="mb-4">
                                     <label for="text" class="form-label">Codice Fiscale</label>
@@ -131,6 +111,16 @@
                         <div class="mb-3">
                             <button type="submit" class="btn btn-primary rounded-8" name="submit">Resistrati</button>
                         </div>
+                        {% if error==1 %}
+                        <p style="color: red;">Utente già esiste</p>
+                        {% endif %}
+                        {% if error==2 %}
+                        <p style="color: red;">Il codice fiscale è già usato da un altro account</p>
+                        {% endif %}
+                        {% if error==3 %}
+                        <p style="color: red;">Le password non coincidono</p>
+                        {% endif %}
+                        <div class="mb-4">
 
                         <p>Hai già un account? <a href="/">Accedi</a></p>
                     </form>
@@ -139,11 +129,6 @@
         </div>
 
     </center>
-
-
-
-
-
 
 
 
