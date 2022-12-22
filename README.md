@@ -1,6 +1,6 @@
 # Gemensa
-Gestione Prenotazioni Mensa
-Unimensa is a Progressive Web App made by **Luciano d'Agostino** for the project of Web Technologies (University of Naples Parthenope).
+![Alt text](static/assets/icons/icon192.png "Logo Gemensa")<br>
+Gemensa is a Progressive Web App made by **Luciano d'Agostino** for the project of Web Technologies (University of Naples Parthenope).
 
 The purpose of the PWA is to facilitate a company in the management of reservations for access to the canteen, also incorporating the successful use of the meal and, if necessary, generating the report for accounting.
 
