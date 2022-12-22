@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/mdb/css/mdb.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Gemensa</title>
+
+    <style>
+        .btn-check:checked + .btn-light, .btn-check:active + .btn-light, .btn-light:active, .btn-light.active, .show > .btn-light.dropdown-toggle {background-color: #0d6efd !important; color: white !important;}
+    </style>
+
+</head>
+
+
+
+<body background="../static/assets/sfondo.jpg">
+
+
+    <div class="container-fluid">
+        <center>
+
+            <div class="row d-flex align-items-center justify-content-center">
+
+                <div class="col">
+                </div>
+
+                <div class="col">
+                    <div class="mb-4">
+                        <Img src="../static/assets/Logo.png" style="width: 120px;" />
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card bg-primary rounded-8 shadow-5-strong">
+
+                        <div class="row d-flex align-items-center justify-content-center">
+                            <div class="col">
+                                <div class="container fluid">
+                                    <span style="color: white;">
+                                        {{session.nome}}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="container fluid">
+                                    <a class="btn btn-info btn-rounded" href="/profilo" role="button"><i> <img
+                                                src="../static/assets/icons8-user-64.png" style="height: 20px;"></i></a>
+                                    <a class="btn btn-danger btn-rounded" href="/logout" role="button"><i> <img
+                                                src="../static/assets/icons8-logout-50.png" style="height: 20px;"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+    </div>
+
+    </center>
+    </div>
+
+<div class="container">
+
+    <center>
+
+            <div class="col">
+                <div class="d-flex align-items-center justify-content-center" style="height: 300px;">
+                    <div class="card bg-light rounded-8 shadow-5-strong " style="width: 600px; height: 300px; ">
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <h1>Lista Del</h1>
+                            </div>
+                            <div class="mb-4">
+                                <form method="POST" style="width: 400px;">
+
+                                    <div class="mb-4">
+                                        <label for="data" class="form-label">del</label>
+                                        <input type="date" class="form-control rounded-8 shadow-3" id="date" name="date"
+                                            required>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <div class="row d-flex align-items-center justify-content-center">
+                                            <div class="col">
+                                                <button value='Colazione' name="Colazione" class="btn btn-primary btn-rounded"
+                                                    name="colazione">Colazione</button>
+                                            </div>
+                                            <div class="col">
+                                                <button value='Pranzo' name="Pranzo" class="btn btn-primary btn-rounded"
+                                                    name="pranzo">Pranzo</button>
+                                            </div>
+                                            <div class="col">
+                                                <button value='Cena' name="Cena" class="btn btn-primary btn-rounded"
+                                                    name="cena">Cena</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</div>
+</center>
+</div>
+
+
+    <!-- JS Bundle -->
+    
+    <script src="../static/js/liste.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/mdb/js/mdb.min.js"></script>
+    </body>
+    
+    </html>

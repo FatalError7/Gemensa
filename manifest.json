@@ -1,0 +1,43 @@
+{
+"name": "Gemensa",
+"short_name": "Gemensa",
+"start_url": "/",
+"display": "standalone",
+"description": "Gestione prenotazioni mensa",
+"lang": "it",
+"dir": "auto",
+"theme_color": "#000000",
+"background_color": "#000000",
+"orientation": "any",
+
+"icons": [
+    {
+        "src": "/static/assets/icons/icon512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+    },
+    {
+        "src": "/static/assets/icons/icon192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+    }
+],
+"screenshots": [
+    {
+        "src": "https://www.pwabuilder.com/assets/screenshots/screen1.png",
+        "sizes": "2880x1800",
+        "type": "image/png",
+        "description": "A screenshot of the home page"
+    }
+],
+"prefer_related_applications": "false",
+"shortcuts": [
+    {
+        "name":"Gemensa",
+        "url":"/",
+        "description":"Gestione prenotazioni mensa"
+    }
+]
+}

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000" />
+    
+
+    <!-- Bootstrap CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/mdb/css/mdb.min.css" rel="stylesheet">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="apple-touch-icon" href="../static/assets/icons/icon192.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Gemensa</title>
+    <Style>
+        form {
+            width: 400px;
+            height: auto;
+        }
+
+    </Style>
+</head>
+
+
+
+<body background="../static/assets/sfondo.jpg">
+
+    
+    
+    <div class="container-fluid">
+        <center>
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col">
+                </div>
+                <div class="col">
+                    <div class="mb-4">
+                        <Img src="../static/assets/Logo.png" style="width: 200px;" />
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- vuota -->
+                </div>
+            </div>
+    </div>
+    </center>
+    </div>
+    <center>
+        <div class="d-flex align-items-center justify-content-center" style="height: 430px;">
+
+            <div class="card bg-light rounded-8 shadow-5-strong ">
+                <div class="card-body">
+
+                    <div class="mb-4">
+                        <h1>Accedi</h1>
+                    </div>
+
+                    <form name="login">
+                        <div class="mb-4">
+                            <label for="text" class="form-label">Username</label>
+                            <input type="text" class="form-control rounded-8 shadow-3" id="username" name="username"
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="Password" class="form-label">Password</label>
+                            <input type="password" name="password" class="form-control rounded-8 shadow-3" id="password"
+                                required>
+                        </div>                                                                        
+                            <p id="error-user" style="color: red;display: none">L'utente non esiste</p>                       
+                       
+                            <p id="error-passw" style="color: red; display: none;">Password sbagliata</p>                        
+                        
+                        <div class="mb-4">
+                            <button type="submit" class="btn btn-primary btn-block rounded-8">Accedi</button>
+                        </div>
+
+                        <p class="text">Non hai un account? <a href="/register">Registrati</a></p>
+
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="d-flex align-items-center justify-content-center" style="height: 50px;">
+            <H6>Creato da Luciano d'Agostino | 2022</H6>
+        </div>
+
+
+
+    </center>
+    </div>
+
+    <!-- JS Bundle -->
+    <script src="../main.js"></script>
+    <script src="../static/js/login.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/mdb/js/mdb.min.js"></script>
+</body>
+
+</html>

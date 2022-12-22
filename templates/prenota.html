@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/mdb/css/mdb.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <title>Gemensa</title>
+    <Style>
+        form {
+            width: 560px;
+            height: auto;
+        }
+         .btn-check:checked + .btn-light, .btn-check:active + .btn-light, .btn-light:active, .btn-light.active, .show > .btn-light.dropdown-toggle {background-color: #0d6efd !important; color: white !important;}
+    </Style>
+</head>
+
+
+
+<body background="../static/assets/sfondo.jpg">
+
+
+
+    <div class="container-fluid">
+    
+    
+    
+    
+        <center>
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col">
+                    <!-- vuota -->
+                </div>
+                <div class="col">
+                    <div class="mb-4">
+                        <Img src="../static/assets/Logo.png" style="width: 120px;" />
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- vuota -->
+                </div>
+            </div>
+        </center>
+    </div>
+    
+    
+    <div class="container">
+    
+        <center>
+            <div class="d-flex align-items-center justify-content-center" style="height: 400px;">
+                <div class="card bg-light rounded-8 shadow-5-strong ">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <h1>Aggiungi prenotazione</h1>
+                        </div>
+                        <form method="POST">
+    
+                            <div class="row d-flex align-items-center justify-content-center">
+                                <div class="col-5">
+                                    <div class="mb-4">
+                                        <label for="data" class="form-label">Modalità</label>
+                                        <select class="form-select rounded-8 shadow-3" required
+                                            aria-label="Default select example" name="modalita">
+                                            <option value=''>Scegli la modalità</option>
+                                            <option value="Mensa">Mensa</option>
+                                            <option value="Sacchetto">Sacchetto</option>
+                                        </select>
+                                    </div>
+                                </div>
+    
+                                <div class="col">
+                                    <p class="form-label">Seleziona i pasti</p>
+                                    <div class="row d-flex align-items-center justify-content-center">
+                                        <div class="col">
+                                            <div class="mb-4">
+                                                <input type="checkbox" class="btn-check" id="btn-check4" name="colazione"
+                                                    value="true" autocomplete="off" />
+                                                <label class="btn btn-light btn-rounded btn-sm"
+                                                    for="btn-check4">Colazione</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="mb-4">
+                                                <input type="checkbox" class="btn-check" id="btn-check5" name="pranzo"
+                                                    value="true" autocomplete="off" />
+                                                <label class="btn btn-light btn-rounded btn-sm"
+                                                    for="btn-check5">Pranzo</label>
+                                            </div>
+                                        </div>
+                                        <div class="col d-flex align-items-right justify-content-right">
+                                            <div class="mb-4 d-flex align-items-right justify-content-right">
+                                                <input type="checkbox" class="btn-check" id="btn-check6" name="cena"
+                                                    value="true" autocomplete="off" />
+                                                <label class="btn btn-light btn-rounded btn-sm"
+                                                    for="btn-check6">Cena</label>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                            </div>
+                            <div class="row">
+                                
+                                <div class="col">
+                                    <div class="mb-4">
+                                        <label for="data" class="form-label">dal</label>
+                                        <input type="date" class="form-control rounded-8 shadow-3" id="datafrom"
+                                            name="datafrom" required>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="mb-4">
+                                        <label for="data" class="form-label">al</label>
+                                        <input type="date" class="form-control rounded-8 shadow-3" id="datato" name="datato"
+                                            required>
+                                    </div>
+                                </div>
+                            </div>
+                            {% if error==1 %}
+                            <p style="color: red;">Seleziona almeno un pasto</p>
+                            {% endif %}
+                            {% if error==2 %}
+                            <p style="color: red;">Le date non rispettano le regole</p>
+                            {% endif %}
+                            {% if error==3 %}
+                            <p style="color: red;">Esistono già prenotazioni in quel periodo</p>
+                            {% endif %}
+                            <div class="mb-4">
+                                <button type="submit" class="btn btn-primary btn-block btn-rounded"
+                                    name="submit">Prenota</button>
+                            </div>
+        
+                            <p><a href="/dashboard">Torna indietro</a></p>
+                        </form>
+                    </div>
+                </div>
+        </center>
+    </div>
+
+    <!-- JS Bundle -->
+
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/mdb/js/mdb.min.js"></script>
+</body>
+
+</html>
