@@ -27,5 +27,6 @@ The purpose of the PWA is to facilitate a company in the management of reservati
 5. Make sure the python interpreter is configured correctly.
 6. Install MongoDB for your operating system.
 7. Populate the database with the main accounts by running the "InitDb.py" script in the "ScriptDb" folder
+* Account: **admin** e **mensa**  Password(default): **1234**
 8. To run the application you can use the command: **> flask run -h 0.0.0.0**
 9. The app is ready
